@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "ShowCandidate";
+}
+
+
+<div ng-controller="ShowCandidateController">
+    <div class="container">
+        <h3>ข้อมูล candidate</h3>
+        <br>
+        <div ng-init="init()" class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>Email</th>
+                    <th>Fullname</th>
+                    <th>Experience</th>
+                    <th>Age</th>
+                    <th>Computer language</th>
+                    <th>Position</th>
+                    <th>Location</th>
+                    <th>Salary</th>
+                </tr>
+                <tr ng-repeat="em in employees">
+                    <td>{{em.email}}</td>
+                    <td>{{em.fullname}}</td>
+                    <td>{{em.experience}}</td>
+                    <td>{{em.age}}</td>
+                    <td style="text-align:center">{{em.computer_lang}}</td>
+                    <td>{{em.position}}</td>
+                    <td>{{em.location}}</td>
+                    <td>{{em.salary}}</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/ShowCandidateController.js"></script>
+}
+
+
+
